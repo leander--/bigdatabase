@@ -55,6 +55,8 @@
   become_method: sudo
   roles:
   - nodejs
+  environment:
+    "{{ proxy_env }}"
 
 - name: Install PhantomJS module
   hosts: webserver
